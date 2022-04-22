@@ -1,0 +1,32 @@
+.sections_sect {
+    padding: 6.75em 0 5.625em;
+}
+.sections_sect .row1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-size: 2.75em;
+    font-weight: 900;
+    margin: 0 0 0.75em;
+}
+.sections_sect .row1 span {
+    color: #5CBE72;
+}
+@media(max-width: 1199px) {
+    .sections_sect {
+        padding: 5.875em 0 4em;
+    }
+    .sections_sect .row1 {
+        font-size: 2.25em;
+        margin: 0 0 0.5em;
+    }
+}
+@media(max-width: 767px) {
+    .sections_sect {
+        padding: 5em 0 2.5em;
+    }
+    .sections_sect .row1 {
+        font-size: 1.5em;
+        margin: 0 0 0.5em;
+    }
+}

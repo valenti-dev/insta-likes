@@ -1,0 +1,45 @@
+.reviews_sect {
+    padding: 5.75em 0 7.25em;
+}
+.service_page .reviews_sect {
+    background-color: #F4F9F5;
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-image: url(/img/text_sect/color-bg.svg);
+}
+.reviews_sect .row1 {
+    font-size: 2.75em;
+    text-align: center;
+    font-weight: 900;
+    line-height: 1.25;
+    margin: 0 0 0.75em;
+    text-transform: uppercase;
+}
+.reviews_sect .row1 span {
+    color: #5CBE72;
+}
+@media(max-width: 1199px) {
+    .reviews_sect {
+        padding: 3em 0 3.75em;
+    }
+    .service_page .reviews_sect {
+        background-image: none;
+    }
+    .reviews_sect .row1 {
+        font-size: 2.25em;
+        margin: 0 0 0.5em;
+    }
+}
+@media(max-width: 767px) {
+    .reviews_sect {
+        padding: 2em 0 2.5em;
+    }
+    .service_page .reviews_sect {
+        background-image: none;
+    }
+    .reviews_sect .row1 {
+        font-size: 1.5em;
+        margin: 0 0 1.15em;
+    }
+}

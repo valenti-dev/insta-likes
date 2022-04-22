@@ -1,0 +1,52 @@
+.contact_sect {
+    padding: 8.75em 0 5.5em;
+    margin-top: -9em;
+    background-image: url(/img/contact_sect/bg.png);
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+.contact_sect .row1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.75em;
+    letter-spacing: 0.09em;
+    font-weight: 900;
+    margin: 0 0 0.35em;
+    line-height: 1.25;
+}
+.contact_sect .row2 {
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.35;
+    margin: 0 0 1em;
+}
+@media(max-width: 1199px) {
+    .contact_sect {
+        background-image: url(/img/contact_sect/bg-tablet.png);
+        margin-top: -7.5em;
+        padding: 8.75em 0 3.75em;
+    }
+    .contact_sect .row1 {
+        font-size: 2.25em;
+        margin: 0 0 0.65em;
+    }
+    .contact_sect .row2 {
+        font-size: 1.375em;
+        margin: 0 0 1.8em;
+    }
+}
+@media(max-width: 767px) {
+    .contact_sect {
+        margin-top: -5.25em;
+        padding: 6.75em 0 2.5em;
+    }
+    .contact_sect .row1 {
+        font-size: 1.5em;
+        margin: 0 0 0.35em;
+    }
+    .contact_sect .row2 {
+        font-size: 1.125em;
+        margin: 0 0 1.75em;
+    }
+}

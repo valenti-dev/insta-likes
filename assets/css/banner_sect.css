@@ -1,0 +1,122 @@
+.banner_sect {
+    margin: -9em 0 0;
+    padding: 12.125em 0 7em;
+    background-image: url(/img/banners_sect/bg.png);
+    background-position: center top;
+    background-size: 120em auto;
+    background-repeat: no-repeat;
+}
+.banner_sect .row1 {
+    max-width: 36em;
+    margin: 0 0 13.375em;
+}
+.banner_sect .row1 .line1 {
+    font-weight: 900;
+    font-size: 2.75em;
+    text-transform: uppercase;
+    line-height: 1.24;
+    margin: 0 0 0.35em;
+
+    opacity: 0;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+.banner_sect .row1 .line1 span {
+    color: #5CBE72;
+}
+.banner_sect .row1 .line2 {
+    font-size: 1.875em;
+    line-height: 1.3333;
+    margin: 0 0 1em;
+    max-width: 16em;
+
+    opacity: 0;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: both;
+}
+.banner_sect .row1 .line3 {
+    opacity: 0;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-delay: 1.3s;
+    animation-fill-mode: both;
+}
+.banner_sect .row1 .line3 .butt {
+    width: 19.5em;
+}
+.banner_sect .row2 {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 2.75em;
+    line-height: 1.24;
+    text-align: center;
+    margin: 0 0 1.25em;
+
+    opacity: 0;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-delay: 1.8s;
+    animation-fill-mode: both;
+}
+.banner_sect .row3 {
+    opacity: 0;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-delay: 2.3s;
+    animation-fill-mode: both;
+}
+
+@media(max-width: 1199px) {
+    .banner_sect {
+        background-image: url(/img/banners_sect/bg-tablet.png);
+        background-size: 100% auto;
+        padding: 12.75em 0 2.75em;
+        margin: -7.5em 0 0;
+    }
+    .banner_sect .row1 {
+        max-width: 21.75em;
+        margin: 0 0 15.25em;
+    }
+    .banner_sect .row1 .line1 {
+        font-size: 2.25em;
+    }
+    .banner_sect .row1 .line2 {
+        font-size: 1.375em;
+    }
+    .banner_sect .row2 {
+        font-size: 2.25em;
+    }
+}
+@media(max-width: 767px) {
+    .banner_sect {
+        margin-top: -5.25em;
+        background-image: url(/img/banners_sect/bg-mob.png);
+        padding: 6.875em 0 3.75em;
+    }
+    .banner_sect .row1 {
+        max-width: 100%;
+        margin: 0 0 5.25em;
+    }
+    .banner_sect .row1 .line1 {
+        font-size: 1.5em;
+        max-width: 11em;
+        margin: 0 0 0.7em;
+    }
+    .banner_sect .row1 .line2 {
+        font-size: 1.125em;
+        max-width: 11.25em;
+        margin: 0 0 2.5em;
+    }
+    .banner_sect .row1 .line3 .butt {
+        width: 100%;
+    }
+    .banner_sect .row2 {
+        font-size: 1.5em;
+        margin: 0 0 0.67em;
+    }
+}

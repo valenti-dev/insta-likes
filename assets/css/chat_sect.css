@@ -1,0 +1,24 @@
+.chat_sect .img {
+    display: block;
+    width: 100%;
+}
+.chat_sect .img.tablet,
+.chat_sect .img.mob {
+    display: none;
+}
+@media(max-width: 1199px) {
+    .chat_sect .img {
+        display: none;
+    }
+    .chat_sect .img.tablet {
+        display: block;
+    }
+}
+@media(max-width: 767px) {
+    .chat_sect .img.tablet {
+        display: none;
+    }
+    .chat_sect .img.mob {
+        display: block;
+    }
+}

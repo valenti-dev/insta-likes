@@ -1,0 +1,109 @@
+.process_sect {
+    padding: 5.5em 0 6.25em;
+    background-image: url(/img/process_sect/bg.svg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+}
+.process_sect .row1 {
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-size: 2.75em;
+    margin: 0 0 0.5em;
+    line-height: 1.24;
+}
+.process_sect .row2 {
+    text-align: center;
+    letter-spacing: -0.04em;
+    line-height: 1.685;
+    max-width: 53em;
+    margin: 0 auto 2em;
+}
+.process_sect .row3 .item {
+    margin: 0 0 2em;
+    display: flex;
+    align-items: center;
+}
+.process_sect .row3 .item:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+.process_sect .row3 .item:last-child {
+    margin: 0;
+}
+.process_sect .row3 .item .img {
+    width: 22em;
+    margin: 0 3.125em 0 0;
+    box-shadow: 0 1.125em 2em  0.25em rgba(0, 0, 0, 0.13);
+    border-radius: 1.25em;
+    background-color: #ffffff;
+}
+.process_sect .row3 .item:nth-child(2n) .img {
+    margin: 0 0 0 3.125em;
+}
+.process_sect .row3 .item .text_wrap {
+    width: calc(100% - 25.125em);
+}
+.process_sect .row3 .item .title {
+    font-size: 1.5em;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.process_sect .row3 .item .desc {
+    line-height: 1.685;
+    letter-spacing: -0.04em;
+    font-size: 1.125em;
+    max-width: 32em;
+}
+@media(max-width: 1199px) {
+    .process_sect {
+        padding: 3em 0 3.5em;
+    }
+    .process_sect .row1 {
+        font-size: 2.25em;
+    }
+    .process_sect .row3 .item .img {
+        width: 20.25em;
+        margin: 0 1.25em 0 0;
+    }
+    .process_sect .row3 .item:nth-child(2n) .img {
+        margin: 0 0 0 1.25em;
+    }
+    .process_sect .row3 .item .text_wrap {
+        width: calc(100% - 21.5em);
+    }
+    .process_sect .row3 .item .title {
+        font-size: 1.5em;
+        margin: 0 0 0.375em;
+    }
+}
+@media(max-width: 767px) {
+    .process_sect {
+        padding: 1.75em 0 2.5em;
+    }
+    .process_sect .row1 {
+        font-size: 1.5em;
+    }
+    .process_sect .row3 {
+        margin: -1em calc(50% - 50vw);
+    }
+    .process_sect .row3 .item {
+        margin: 0;
+        display: block;
+        padding: 1em 5%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .process_sect .row3 .item .img {
+        width: 100%;
+        margin: 0 0 1.5em;
+    }
+    .process_sect .row3 .item .text_wrap {
+        width: 100%;
+        margin: 0;
+
+    }
+}

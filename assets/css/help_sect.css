@@ -1,0 +1,48 @@
+.help_sect {
+    padding: 3.5em 0 5em;
+    text-align: center;
+}
+.help_sect .row1 {
+    font-weight: 900;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-size: 2.75em;
+    line-height: 1.25;
+    margin: 0 0 0.35em;
+}
+.help_sect .row1 span {
+    color: #5CBE72;
+}
+.help_sect .row2 {
+    font-size: 1.875em;
+    line-height: 1.35;
+    margin: 0 auto 1em;
+}
+.help_sect .row3 .butt {
+    width: 19.5em;
+}
+@media(max-width: 1199px) {
+    .help_sect {
+        padding: 3em 0 3.75em;
+    }
+    .help_sect .row1 {
+        font-size: 2.25em;
+        margin: 0 0 0.65em;
+    }
+    .help_sect .row2 {
+        margin: 0 0 0.8em;
+    }
+}
+@media(max-width: 767px) {
+    .help_sect {
+        padding: 2em 0 2.5em;
+    }
+    .help_sect .row1 {
+        font-size: 1.5em;
+        margin: 0 0 0.5em;
+    }
+    .help_sect .row2 {
+        margin: 0 0 1.75em;
+        font-size: 1em;
+    }
+}

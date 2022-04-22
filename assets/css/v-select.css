@@ -1,0 +1,100 @@
+.v-select {
+    position: relative;
+    line-height: 1.15;
+}
+.vs__dropdown-toggle {
+    border: 1px solid #CCCCCC;
+    height: 4em;
+    border-radius: 2em;
+    box-sizing: border-box;
+    display: flex;
+    background-color: #ffffff;
+}
+.vs--open .vs__dropdown-toggle {
+    z-index: 3;
+    position: relative;
+    border-color: transparent;
+    background-color: transparent;
+}
+.vs__selected-options {
+    width: calc(100% - 3.5em);
+    padding: 0 0 0 1.75em;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    flex-basis: 100%;
+}
+.vs__actions {
+    width: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vs__search {
+    height: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: 1.15;
+    border: none;
+    outline: none;
+    width: 0;
+    max-width: 100%;
+    flex-grow: 1;
+    z-index: 1;
+    background-color: inherit;
+}
+.vs__selected {
+    display: flex;
+    align-items: center;
+}
+.vs__open-indicator {
+    fill: #5CBE72;
+}
+.vs--open .vs__open-indicator {
+    transform: scale(-1, -1);
+}
+.vs__dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 4em 1.75em 1.5em;
+    box-sizing: border-box;
+    list-style-type: none;
+    box-shadow: 0 1.125em 2em 0.25em rgba(0, 0, 0, 0.13);
+    border-radius: 2em;
+    border: 1px solid #5CBE72;
+    background-color: #ffffff;
+    z-index: 2;
+}
+.vs__clear {
+    display: none;
+}
+.vs__dropdown-option {
+    font-size: 1.125em;
+    margin: 0 0 0.5em;
+    cursor: pointer;
+}
+.vs__dropdown-option:last-child {
+    margin-bottom: 0;
+}
+.vs__dropdown-option.vs__dropdown-option--highlight {
+    text-decoration: underline;
+    color: #5CBE72;
+    font-weight: 600;
+}
+@media(max-width: 767px) {
+    .vs__dropdown-toggle {
+        height: 3.125em;
+        border-radius: 1.5625em;
+    }
+    .vs__dropdown-menu {
+        padding: 3.125em 1.75em 1.5em;
+        border-radius: 1.5625em;
+    }
+}
