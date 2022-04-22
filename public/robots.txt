@@ -1,6 +1,0 @@
-User-agent: *
-
-Allow: /css/
-Allow: /cdn-cgi/scripts/
-
-Sitemap: https://followerus.com/sitemap.xml
