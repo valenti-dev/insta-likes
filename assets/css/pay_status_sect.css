@@ -1,0 +1,53 @@
+.pay_status_sect {
+    background-position: center;
+    background-size: cover;
+    background-image: url(/img/pay_status_sect/bg.png);
+    margin-top: -9em;
+    padding: 13em 0 7em;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.pay_status_sect .row1 {
+    margin: 0 0 1.75em;
+}
+.pay_status_sect .row1 .icon {
+    height: 7.25em;
+    display: block;
+    margin: 0 auto;
+}
+.pay_status_sect .row2 {
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.75em;
+    line-height: 1.25;
+    margin: 0 0 0.25em;
+}
+.pay_status_sect .row3 {
+    font-size: 1.375em;
+    max-width: 29.5em;
+    margin: 0 auto 1em;
+    line-height: 1.685;
+}
+@media(max-width: 1199px) {
+    .pay_status_sect {
+        margin-top: -7.5em;
+    }
+    .pay_status_sect .row2 {
+        font-size: 2.25em;
+    }
+}
+@media(max-width: 767px) {
+    .pay_status_sect {
+        margin-top: -5.25em;
+    }
+    .pay_status_sect .row2 {
+        font-size: 1.5em;
+    }
+    .pay_status_sect .row3 {
+        font-size: 1.125em;
+    }
+}

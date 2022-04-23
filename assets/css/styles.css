@@ -90,6 +90,8 @@ ol, ul {
     list-style-type: none;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
 }
 .slick-dots li {
     margin: 0.25em;

@@ -24,4 +24,5 @@ mix.js('assets/js/app.js', 'public/js')
     .css('assets/css/service_text_sect.css', 'public/css')
     .css('assets/css/articles_sect.css', 'public/css')
     .css('assets/css/article_sect.css', 'public/css')
+    .css('assets/css/pay_status_sect.css', 'public/css')
     .disableNotifications();
