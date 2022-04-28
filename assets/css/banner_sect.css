@@ -1,3 +1,16 @@
+@keyframes bg_img2_anim {
+    from {
+        top: 50%;
+    }
+
+    50% {
+        top: 56%;
+    }
+
+    to {
+        top: 50%;
+    }
+}
 .banner_sect {
     margin: -9em 0 0;
     padding: 12.125em 0 7em;
@@ -5,6 +18,29 @@
     background-position: center top;
     background-size: 120em auto;
     background-repeat: no-repeat;
+    position: relative;
+}
+.banner_sect .bg_img_wrap {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 28em;
+    left: 70%;
+}
+.banner_sect .bg_img1 {
+    display: block;
+    width: 44.75em;
+}
+.banner_sect .bg_img2 {
+    position: absolute;
+    width: 69.55%;
+    transform: translate(-50%, -50%);
+    top: 53%;
+    left: 48%;
+    animation-name: bg_img2_anim;
+    animation-duration: 3s;
+    /*animation-delay: 0.3s;
+    animation-fill-mode: both;*/
+    animation-iteration-count: infinite;
 }
 .banner_sect .row1 {
     max-width: 36em;

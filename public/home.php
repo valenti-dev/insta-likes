@@ -5,6 +5,10 @@ $description = '';
 ?>
 <? include '../assets/php/head.php'; ?>
 <section class="banner_sect">
+    <div class="bg_img_wrap">
+        <img class="bg_img1" alt="" src="/img/banners_sect/bg-img.png">
+        <img class="bg_img2" alt="" src="/img/banners_sect/bg-img2.png">
+    </div>
     <div class="wrap">
         <div class="row1">
             <h1 class="line1">
@@ -208,9 +212,30 @@ $styles['process_sect'] = [
 ];
 ?>
 <section class="chat_sect">
-    <img class="img" alt="" src="/img/chat_sect/img.png">
-    <img class="img tablet" alt="" src="/img/chat_sect/img-tablet.png">
-    <img class="img mob" alt="" src="/img/chat_sect/img-mob.png">
+    <div class="wrap">
+        <div class="row1">
+            <div class="msg">
+                <div class="msg_text">
+                    Are there benefits to buying Instagram likes? 🤔
+                </div>
+            </div>
+            <div class="msg answer">
+                <div class="msg_text">
+                    We all know that Instagram is all about name or brand recognition. If you don’t get your name out there, no one knows who you are! 😊
+                </div>
+            </div>
+            <div class="msg">
+                <div class="msg_text">
+                    How can Goread.io help me to buy instagram likes? 😎
+                </div>
+            </div>
+            <div class="msg answer">
+                <div class="msg_text">
+                    If you’re a hopeful new influencer, a business new to social media, or someone in between, Goread.io can help you find new followers 😊
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <?
 $styles['chat_sect'] = [
