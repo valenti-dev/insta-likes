@@ -1,3 +1,4 @@
+<? $version = '1.0.0'; ?>
 </main>
 <? include 'footer.php'; ?>
 </div>
@@ -10,6 +11,6 @@
         <link rel="<?= $style['rel']; ?>" href="<?= $style['href']; ?>">
     <? endforeach; ?>
 </noscript>
-<script src="/js/app.js"></script>
+<script src="/js/app.js?v=<?= $version; ?>"></script>
 <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
 </html>
