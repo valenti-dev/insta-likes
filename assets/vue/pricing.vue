@@ -5,7 +5,7 @@
                 <plan  v-for="(plan, plan_indx) in plans" v-if="+plan.price" :key="plan_indx" v-bind="plan" @select="order_plan = plan" :service="service" :mark="mark" :reviews_qty="reviews_qty"></plan>
             </slick-slider>
         </div>
-        <order-popup v-if="order_plan" :plan="order_plan" @close="order_plan = null" :service="service" :system="system"></order-popup>
+        <!--<order-popup v-if="order_plan" :plan="order_plan" @close="order_plan = null" :service="service" :system="system"></order-popup>-->
     </section>
 </template>
 
@@ -92,6 +92,34 @@
                     this.inited = true;
                 }, 500);
             },
+        },
+        watch: {
+            order_plan(plan) {
+                if(plan) {
+                    console.log(plan);
+                    var params = {
+                        'plan[count]': plan.count,
+                        'plan[price]': plan.price,
+                        service: this.service,
+                        system: this.system,
+                    };
+                    for(var key in plan.extra) {
+                        params['plan[extra]['+key+'][count]'] = plan.extra[key].count;
+                        params['plan[extra]['+key+'][disabled]'] = plan.extra[key].disabled;
+                        params['plan[extra]['+key+'][name]'] = plan.extra[key].name;
+                        params['plan[extra]['+key+'][price]'] = plan.extra[key].price;
+                    }
+                    for(var key in plan.types) {
+                        params['plan[types]['+key+'][disabled]'] = plan.types[key].disabled;
+                        params['plan[types]['+key+'][discount]'] = plan.types[key].discount;
+                        params['plan[types]['+key+'][name]'] = plan.types[key].name;
+                        params['plan[types]['+key+'][price]'] = plan.types[key].price;
+                    }
+
+                    params = new URLSearchParams(params);
+                    location.href = '/order/?'+params.toString();
+                }
+            }
         },
     }
 </script>

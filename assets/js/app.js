@@ -9,6 +9,7 @@ import contactForm from '../vue/contactForm';
 import search from '../vue/search';
 import sectionsItems from '../vue/sectionsItems';
 import pricing from '../vue/pricing';
+import orderForm from '../vue/orderForm';
 ////////////////
 window.axios = require('axios').default;
 axios.defaults.withCredentials = true;
@@ -40,6 +41,7 @@ var app = new Vue({
         search,
         'sections-items': sectionsItems,
         pricing,
+        'order-form': orderForm,
     },
     data: {
         header: {
