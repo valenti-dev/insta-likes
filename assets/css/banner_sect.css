@@ -11,6 +11,19 @@
         top: 50%;
     }
 }
+@keyframes bg_img1_anim {
+    from {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
 .banner_sect {
     margin: -9em 0 0;
     padding: 12.125em 0 7em;
@@ -26,9 +39,16 @@
     top: 28em;
     left: 70%;
 }
+.banner_sect .wrap {
+    position: relative;
+    z-index: 1;
+}
 .banner_sect .bg_img1 {
     display: block;
     width: 44.75em;
+    animation-name: bg_img1_anim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 .banner_sect .bg_img2 {
     position: absolute;
@@ -38,8 +58,6 @@
     left: 48%;
     animation-name: bg_img2_anim;
     animation-duration: 3s;
-    /*animation-delay: 0.3s;
-    animation-fill-mode: both;*/
     animation-iteration-count: infinite;
 }
 .banner_sect .row1 {
@@ -114,6 +132,9 @@
         padding: 12.75em 0 2.75em;
         margin: -7.5em 0 0;
     }
+    .banner_sect .bg_img_wrap {
+        left: 83%;
+    }
     .banner_sect .row1 {
         max-width: 21.75em;
         margin: 0 0 15.25em;
@@ -133,6 +154,13 @@
         margin-top: -5.25em;
         background-image: url(/img/banners_sect/bg-mob.png);
         padding: 6.875em 0 3.75em;
+    }
+    .banner_sect .bg_img_wrap {
+        top: 20em;
+        left: 80%;
+    }
+    .banner_sect .bg_img1 {
+        width: 12em;
     }
     .banner_sect .row1 {
         max-width: 100%;
