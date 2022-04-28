@@ -71,5 +71,8 @@ var app = new Vue({
         scroll_event() {
             this.scrolled = window.pageYOffset;
         },
+        go_to_faq() {
+            location.href = '/support#faq';
+        },
     },
 });

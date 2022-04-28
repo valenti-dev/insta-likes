@@ -10,7 +10,7 @@ $description = '';
             <div class="row2">
                 How can we help?
             </div>
-            <search placeholder="Ask a question or search of keabords" class="row3"></search>
+            <search placeholder="Ask a question or search of keabords" class="row3" @input="go_to_faq"></search>
         </div>
     </section>
 <?

@@ -1,4 +1,4 @@
-<? $version = '1.0.2'; ?>
+<? $version = '1.0.3'; ?>
 </main>
 <? include 'footer.php'; ?>
 </div>
