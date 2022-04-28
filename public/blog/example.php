@@ -7,6 +7,19 @@ $views = 0;
 $page_class = 'article_page';
 $title = 'Blog';
 $description = '';
+//////////
+$view_qties = json_decode(file_get_contents(__DIR__.'/../../assets/view_qties.json', FILE_USE_INCLUDE_PATH), true);
+if(!is_array($view_qties)) {
+    $view_qties = [];
+}
+if(!isset($view_qties[$_GET['q']])) {
+    $view_qties[$_GET['q']] = 0;
+}
+$views = $view_qties[$_GET['q']];
+$views++;
+$view_qties[$_GET['q']] = $views;
+file_put_contents(__DIR__.'/../../assets/view_qties.json', json_encode($view_qties));
+//////////
 ?>
 <? include __DIR__.'/../../assets/php/head.php'; ?>
     <section class="title_sect">
