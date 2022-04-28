@@ -6,3 +6,4 @@ package-lock.json
 node_modules
 .idea
 mix-manifest.json
+assets/view_qties.json
