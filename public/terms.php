@@ -1,7 +1,7 @@
 <?
 $page_class = 'terms_page';
-$title = 'Terms';
-$description = '';
+$title = 'Terms of Service - Our Expert Platform';
+$description = 'Terms of Service. Our online social media marketing platform Likewave';
 ?>
 <? include '../assets/php/head.php'; ?>
     <section class="title_sect">

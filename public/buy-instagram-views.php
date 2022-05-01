@@ -1,7 +1,7 @@
 <?
 $page_class = 'service_page';
-$title = 'Buy Instagram Views';
-$description = '';
+$title = 'Buy Instagram Views with Expert Platform at $0.80';
+$description = 'Buy Instagram views from our platform cheaper than $1 per 200. Instant delivery views, exelent 24/7 customer support. 100% client satisfaction';
 ?>
 <? include '../assets/php/head.php'; ?>
     <section class="title_sect">

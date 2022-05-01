@@ -1,7 +1,7 @@
 <?
 $page_class = 'service_page';
-$title = 'Buy Instagram Followers';
-$description = '';
+$title = 'Buy Instagram Followers with Expert Platform at $1.30';
+$description = 'Buy Instagram followers from our platform under $2 per 100 followers. Instant delivery, exelent 24/7 customer support. 100% client satisfaction';
 ?>
 <? include '../assets/php/head.php'; ?>
     <section class="title_sect">

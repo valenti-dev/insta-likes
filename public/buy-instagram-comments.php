@@ -1,7 +1,7 @@
 <?
 $page_class = 'service_page';
-$title = 'Buy Instagram comments';
-$description = '';
+$title = 'Buy Instagram Comments with Expert Platform at $3.20';
+$description = 'Buy Instagram comments from our platform cheaper than $4 per 25 comments. Instant delivery, exelent 24/7 customer support. 100% client satisfaction';
 ?>
 <? include '../assets/php/head.php'; ?>
     <section class="title_sect">

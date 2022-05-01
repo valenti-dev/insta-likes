@@ -1,7 +1,7 @@
 <?
 $page_class = 'service_page';
-$title = 'Buy Instagram Auto-Likes';
-$description = '';
+$title = 'Buy Automatic Instagram Likes - Make your schedule';
+$description = 'Buy automatic Instagram likes from our platform cheaper than $11 per 1000 auto likes. Instant delivery, exelent 24/7 customer support';
 ?>
 <? include '../assets/php/head.php'; ?>
     <section class="title_sect">

@@ -5,8 +5,8 @@ $date = '01.05.22';
 $views = 0;
 
 $page_class = 'article_page';
-$title = 'What is 5xx Instagram Server Error?';
-$description = '';
+$title = 'What Is An Instagram 5xx Server Error? Likewave.io';
+$description = 'So what is the meaning behind Instagram 5xx Server Error? In this article, we will explain to you the different kinds of 5xx Instagram Server Errors and how to fix them.';
 //////////
 $view_qties = json_decode(file_get_contents(__DIR__.'/../../assets/view_qties.json', FILE_USE_INCLUDE_PATH), true);
 if(!is_array($view_qties)) {
@@ -140,7 +140,7 @@ $styles['title_sect'] = [
             <p>
                 Instagram is not perfect, it has its issues but what matters most is that it gets resolved quickly. The next time you face an Instagram server error, try considering those methods above for a general fix.
             </p>
-            
+
         </div>
     </div>
 </section>

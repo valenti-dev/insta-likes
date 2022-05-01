@@ -1,7 +1,7 @@
 <?
 $page_class = 'terms_page';
-$title = 'Terms';
-$description = '';
+$title = 'Privacy Policy. Our platform Likewave';
+$description = 'Privacy Policy. Our online Social Media marketing platform Likewave';
 ?>
 <? include '../assets/php/head.php'; ?>
     <section class="title_sect">

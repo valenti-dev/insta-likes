@@ -1,7 +1,7 @@
 <?
 $page_class = 'blog_page';
-$title = 'Blog';
-$description = '';
+$title = 'Online Social Media Marketing Blog';
+$description = 'A lot of tips and hacks for growing organic traffic and popularity on social media sites';
 $canonical = 'https://'.$_SERVER['SERVER_NAME'].'/blog/';
 ?>
 <? include __DIR__.'/../../assets/php/head.php'; ?>

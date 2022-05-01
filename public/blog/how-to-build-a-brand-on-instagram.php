@@ -5,8 +5,8 @@ $date = '01.05.22';
 $views = 0;
 
 $page_class = 'article_page';
-$title = 'How to Build a Brand on Instagram?';
-$description = '';
+$title = 'How to Build a Brand on Instagram? Real Tips 2022';
+$description = 'Are you looking how to build a brand on Instagram? You’ve clicked the right article. It’s about time you should start building your brand on Instagram.';
 //////////
 $view_qties = json_decode(file_get_contents(__DIR__.'/../../assets/view_qties.json', FILE_USE_INCLUDE_PATH), true);
 if(!is_array($view_qties)) {

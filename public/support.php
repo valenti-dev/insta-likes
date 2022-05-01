@@ -1,7 +1,7 @@
 <?
 $page_class = 'support_page';
-$title = 'Support';
-$description = '';
+$title = 'Expert Support from Our Platform';
+$description = 'Get customer support from our online social media marketing platform';
 ?>
 <? include '../assets/php/head.php'; ?>
     <section class="title_sect">

@@ -1,7 +1,7 @@
 <?
 $page_class = 'home_page';
-$title = 'Home';
-$description = '';
+$title = 'Get Instagram Followers or Likes Starting Now - Only $1.30';
+$description = 'Get likes, followers, views  at an affordable price and run your social media marketing campaigns smoothly. We offering very high quality Instagram services';
 ?>
 <? include '../assets/php/head.php'; ?>
 <section class="banner_sect">

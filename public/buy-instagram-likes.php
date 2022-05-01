@@ -1,7 +1,7 @@
 <?
 $page_class = 'service_page';
-$title = 'Buy Instagram Likes';
-$description = '';
+$title = 'Buy Instagram Likes with Expert Platform at $3.20';
+$description = 'Buy Instagram likes from our platform under $4 per 200. Instant delivery, exelent customer support. We are reputed for maintaining 100% client satisfaction.';
 ?>
 <? include '../assets/php/head.php'; ?>
     <section class="title_sect">

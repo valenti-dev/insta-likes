@@ -1,7 +1,7 @@
 <?
 $page_class = 'contact_page';
-$title = 'Contact Us';
-$description = '';
+$title = 'Contact Us - Expert Platform';
+$description = 'Ask us if you have any questions. Online social media marketing platform';
 ?>
 <? include '../assets/php/head.php'; ?>
 <section class="contact_sect">
