@@ -51,6 +51,11 @@
 .article_sect .row2 > *:last-child {
     margin-bottom: 0;
 }
+.article_sect .row2 img {
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+}
 .article_sect .row2 .imgs_wrap {
     display: flex;
     flex-wrap: wrap;

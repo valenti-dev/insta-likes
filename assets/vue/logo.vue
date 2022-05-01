@@ -1,6 +1,6 @@
 <template>
     <a href="/" class="logo">
-        <img alt="" :src="'/img/logo'+(type ? ('-'+type) : '')+'.svg'">
+        <img alt="likewave.io buy Instagram likes and followers" :src="'/img/logo'+(type ? ('-'+type) : '')+'.svg'">
     </a>
 </template>
 

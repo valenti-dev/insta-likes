@@ -7,11 +7,11 @@ $description = '';
     <section class="title_sect">
         <div class="wrap">
             <div class="row0">
-                <img class="img" alt="" src="/img/title_sect/buy-instagram-likes-img.svg">
+                <img class="img" alt="Buy automatic Instagram likes" src="/img/title_sect/buy-instagram-likes-img.svg">
             </div>
-            <h1 class="row1"><span>Buy Instagram Auto-Likes</span></h1>
+            <h1 class="row1"><span>BUY INSTAGRAM AUTO-LIKES</span></h1>
             <div class="row2">
-                At Likes.io, you can buy Instagram likes safely, quickly, and easily with just a few clicks. See our deals below!
+                Buy automatic Instagram likes and instantly see how quick your audience reach increases after posting new photos
             </div>
             <div class="row3">
                 <butt href="#buy">Buy Now</butt>
@@ -31,7 +31,7 @@ $styles['title_sect'] = [
                 Customer <span>Feedback & Reviews</span>
             </h2>
             <reviews class="row2" service="Auto-Likes">
-                Here at Buzzoid, we pride ourselves on exceptional service and affordable prices. Don’t just take our word for it – check out what customers say about our Instagram likes below
+                Feedback from our customers is our pride, and we try to be better. Let's check what they say.
             </reviews>
         </div>
     </section>
@@ -44,24 +44,51 @@ $styles['reviews_sect'] = [
 <section class="service_text_sect">
     <div class="wrap">
         <div class="row1">
-            <h2>
-                Vape and hookah: the difference in price
-            </h2>
+            <h2>Instagram Comments To Grow an Engaged</h2>
             <p>
-                It is difficult to compare the cost of these devices, because manufacturers produce many models of hookahs and electronic cigarettes.
+                Instagram algorithm reacts to user activity on your profile. So, if you want be popular om Social Media you have to find a way to consistently get likes for your posts.<br>
+                You receive real likes from real users. Now that sounds like a pretty good way to boost your presence on Instagram! Here, we will explain why you should only trust <a href="https://likewave.io">Likewave</a> for this service, how many steps to buy Instagram auto likes, and what happens after! So, keep reading ahead!
             </p>
             <p>
-                Refillable vapes and hookahs are similar in price. They are expensive, require maintenance and purchase of fluid components. They are beneficial for experienced smokers who understand the smoking device and like to make smoking mixtures according to their own recipes.
+                If you have any other concerns or questions regarding auto likes that can’t be found here, then our support chat will be happy to assist you!
+            </p>
+            <h2>Why Should You Buy Automatic Instagram Likes?</h2>
+            <p>
+                If you don’t want to be bothered by having to manually purchase likes every single time you upload new content on Instagram, then we suggest that you should buy automatic Instagram likes! This service is perfect for those who upload consistently or more often than usual.
             </p>
             <p>
-                What is better to buy for a beginner, a vape or a hookah?
+                Every time you post something new online, the <a href="https://likewave.io/buy-instagram-comments">comments</a>, <a href="https://likewave.io/buy-instagram-followers">followers</a> and <a href="https://likewave.io/buy-instagram-likes">likes</a> are what keeps you afloat on Instagram’s algorithm. And, if you want to consistently stay on Instagram’s good side, you can get it with buy automatic Instagram likes - a fast and anonymous way to be popular on Social Platforms.
             </p>
             <p>
-                Disposable electronic cigarette. This safe, affordable and convenient device will help you experience all the benefits of aromatic steam. On our website, you can buy Maskking original and other popular vapes at a bargain price. The principle of the Maskking robot is very simple, since there are no buttons in it and you can use the device immediately after purchase. You just need to get Maskking out of the box. The first puff activates the heat sensor, with a puff, nicotine is delivered. The number of puffs Maskking is equal to two packs of cigarettes.
+                We understand the frustration of posting new content and not receiving the number of likes it deserves. When you buy Instagram auto likes, you actually save more compared to purchasing the packages manually–especially if you upload new posts regularly.
             </p>
-        </div>
-        <div class="row2">
-            <a href="#">Read full text</a>
+            <h2>Why Buy Automatic Instagram Likes from Likewave?</h2>
+            <p>
+                We make things a lot easier - let's <b>buy Instagram auto likes</b> from us! Likewave has developed a program that ensures each post you upload receives the desired amount of likes within that time frame.
+            </p>
+            <p>
+                The auto likes are distributed in a complex formula and pattern to ensure that your account isn’t banned or marked as spam by Instagram. We ensure that this feature available on our site doesn’t bring any risk to your user handle. We know how frustrating it is to give your complete trust only for you to receive disappointment.
+            </p>
+            <p>
+                Likewave is far from that! Our methods have been tested a lot of times and are safe to purchase, so that when you buy automatic Instagram likes from us, your overall experience and expectations are satisfied.
+            </p>
+            <p>
+                We also have a 24/7 customer <a href="https://likewave.io/support">support</a> should you have any concerns or issues. Our team is happy to resolve it for you!
+            </p>
+            <h2>How Do You Buy Automatic Instagram Likes?</h2>
+            <p>
+                It’s so easy to purchase automatic Instagram likes when you’re doing it the <b>Likewave</b> way! In just three easy steps, you’ll be able to see how fast your growth likes are on Instagram. The first step is to choose your desired automatic Instagram likes count. There is an option per post or a subscription.
+            </p>
+            <p>
+                Our packages range from 50 likes to more than 3000! You have the ability to customize your package if you want more <b>automatic Instagram likes</b>.
+            </p>
+            <p>
+                The next step is to input your details for checkout. Here at Likewave, we NEVER ask for your passwords or other personal information that’s not needed when checking out. All transactions are secure and confidential.
+            </p>
+            <p>
+                The last step is to enjoy the result! Recommend friends to buy automatic Instagram likes.<br>
+                Let’s order <b>automatic Instagram likes</b> from Likewave, the entire process is safe and secure!
+            </p>
         </div>
     </div>
 </section>
