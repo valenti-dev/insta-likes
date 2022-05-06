@@ -1,6 +1,7 @@
 <template>
     <div class="payment_method" :class="{
         green: (discount > 0),
+        red: (discount < 0),
     }" @click="click">
         <div class="logo"></div>
         <div class="data">
@@ -81,13 +82,18 @@
         height: 2.75em;
         box-sizing: border-box;
         border-radius: 50%;
-        border: 1px solid #FA655C;
+        border: 1px solid #C4C4C4;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        color: #FA655C;
+        color: #C4C4C4;
         font-weight: 600;
+        background-color: #ffffff;
+    }
+    .payment_method.red .discount_percentage {
+        border-color: #FA655C;
+        color: #FA655C;
         background-color: #FFF3F2;
     }
     .payment_method.green .discount_percentage {
@@ -108,6 +114,9 @@
         display: flex;
     }
     .discount {
+        color: #C4C4C4;
+    }
+    .payment_method.red .discount {
         color: #FA655C;
     }
     .payment_method.green .discount {
