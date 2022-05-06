@@ -40,6 +40,7 @@
                 plans: [],
                 selected_type: null,
                 order_plan: null,
+                touchThreshold: 10,
                 slick: {
                     dots: false,
                     arrows: true,
