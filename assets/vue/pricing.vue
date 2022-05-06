@@ -40,11 +40,11 @@
                 plans: [],
                 selected_type: null,
                 order_plan: null,
-                touchThreshold: 20,
                 slick: {
                     dots: false,
                     arrows: true,
                     slidesToShow: 4,
+                    touchThreshold: 10,
                     responsive: [
                         {
                             breakpoint: 1200,
