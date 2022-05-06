@@ -7,7 +7,7 @@
             <div class="name">{{ name }}</div>
             <div class="prices">
                 <div class="discount">
-                    {{ discount <= 0 ? '-' : '+'}} {{ $root.user_info.sym_b }}{{ Math.abs(discount_cost) }}{{ $root.user_info.sym_a }}
+                    {{ $root.user_info.sym_b }}{{ price_local }}{{ $root.user_info.sym_a }}
                 </div>
                 <div class="tax">+ {{ tax }}% Vat</div>
             </div>
@@ -29,11 +29,6 @@
             modal: {},
             discount: {},
             price_local: {},
-        },
-        computed: {
-            discount_cost() {
-                return (this.price_local/100*this.discount).toFixed(2);
-            },
         },
         methods: {
             click() {
