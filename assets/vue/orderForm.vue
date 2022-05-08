@@ -38,7 +38,7 @@
                     <a href="#" @click.prevent="username_select = false">Add new one</a>
                 </div>
                 <div class="butt_wrap">
-                    <butt :disabled="disabled" @click="to_step2">Buy</butt>
+                    <butt :disabled="disabled" :loading="loading" @click="to_step2">Buy</butt>
                 </div>
             </template>
             <template v-if="step === 2">
@@ -72,7 +72,7 @@
                     <extra-service v-for="(extra_service, extra_service_key) in plan.extra" :key="extra_service_key" v-bind="extra_service" v-model="selected_extra" :extra_key="extra_service_key"></extra-service>
                 </div>
                 <div class="butt_wrap" v-if="selected_type">
-                    <butt :disabled="disabled" @click="to_step3">Choose payment method for {{ $root.user_info.sym_b }}{{ cost }}{{ $root.user_info.sym_a }}</butt>
+                    <butt :disabled="disabled" :loading="loading" @click="to_step3">Choose payment method for {{ $root.user_info.sym_b }}{{ cost }}{{ $root.user_info.sym_a }}</butt>
                 </div>
             </template>
             <template v-if="step === 3">
@@ -168,6 +168,7 @@
                 username_select: false,
                 accounts: [],
                 disabled: false,
+                loading: null,
                 step: 1,
                 errors: {
                     email: null,
@@ -277,6 +278,7 @@
             },
             load_posts(callback) {
                 this.disabled = true;
+                this.loading = 1;
                 var form_data = new FormData();
                 form_data.append('system', this.system);
                 form_data.append('service', this.service);
@@ -288,7 +290,18 @@
                     form_data.append('user_id', this.posts_user_id);
                     this.all_posts_loaded = true;
                 }
-                axios.post('get_posts_v2.php', form_data).then((response) => {
+                axios.post('get_posts_v2.php', form_data, {
+                    onUploadProgress: (progressEvent) => {
+                        this.loading = Math.ceil(progressEvent.loaded/progressEvent.total*100/2);
+                        console.log('test 1');
+                    },
+                    onDownloadProgress: (progressEvent) => {
+                        console.log('test 2');
+                        if(progressEvent.total) {
+                            this.loading = 50 + Math.ceil(progressEvent.loaded/progressEvent.total*100/2);
+                        }
+                    },
+                }).then((response) => {
                     switch(response.data.result) {
                         case 'Error': {
                             switch(+response.data.error_code) {
@@ -319,6 +332,10 @@
                     }
                 }).catch().then(() => {
                     this.disabled = false;
+                    this.loading = 100;
+                    setTimeout(() => {
+                        this.loading = null;
+                    }, 300);
                 });
             },
             to_step3() {
@@ -340,8 +357,7 @@
                     }
                 }
                 this.disabled = true;
-
-
+                this.loading = 1;
                 if(this.need_posts) {
                     this.selected_posts.forEach((post) => {
                         form_data.append('url[]', post.link);
@@ -353,7 +369,16 @@
                         form_data.append('extra['+extra_key+']', '1');
                     });
                 }
-                axios.post('create_order_v2.php', form_data).then((response) => {
+                axios.post('create_order_v2.php', form_data, {
+                    onUploadProgress: (progressEvent) => {
+                        this.loading = Math.ceil(progressEvent.loaded/progressEvent.total*100/2);
+                    },
+                    onDownloadProgress: (progressEvent) => {
+                        if(progressEvent.total) {
+                            this.loading = 50 + Math.ceil(progressEvent.loaded/progressEvent.total*100/2);
+                        }
+                    },
+                }).then((response) => {
                     switch(response.data.result) {
                         case 'Error': {
                             this.errors.general = response.data.text;
@@ -381,6 +406,10 @@
                     }
                 }).catch((response) => {}).then(() => {
                     this.disabled = false;
+                    this.loading = 100;
+                    setTimeout(() => {
+                        this.loading = null;
+                    }, 300);
                 });
             },
             //step1
