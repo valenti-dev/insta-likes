@@ -8,7 +8,12 @@
             <div class="name">{{ name }}</div>
             <div class="prices">
                 <div class="discount">
-                    {{ $root.user_info.sym_b }}{{ price_local }}{{ $root.user_info.sym_a }}
+                    <template v-if="price_local">
+                        {{ $root.user_info.sym_b }}{{ price_local }}{{ $root.user_info.sym_a }}
+                    </template>
+                    <template v-else>
+                        ${{ price_usd }}
+                    </template>
                 </div>
                 <div class="tax">+ {{ tax }}% Vat</div>
             </div>
@@ -30,6 +35,7 @@
             modal: {},
             discount: {},
             price_local: {},
+            price_usd: {},
         },
         methods: {
             click() {
