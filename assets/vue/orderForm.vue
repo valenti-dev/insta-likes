@@ -169,6 +169,7 @@
                 accounts: [],
                 disabled: false,
                 loading: null,
+                loading_interval: null,
                 step: 1,
                 errors: {
                     email: null,
@@ -279,6 +280,11 @@
             load_posts(callback) {
                 this.disabled = true;
                 this.loading = 1;
+                this.loading_interval = setInterval(() => {
+                    if(this.loading < 85) {
+                        this.loading += 15;
+                    }
+                }, 300);
                 var form_data = new FormData();
                 form_data.append('system', this.system);
                 form_data.append('service', this.service);
@@ -290,18 +296,16 @@
                     form_data.append('user_id', this.posts_user_id);
                     this.all_posts_loaded = true;
                 }
-                axios.post('get_posts_v2.php', form_data, {
+                axios.post('get_posts_v2.php', form_data/*, {
                     onUploadProgress: (progressEvent) => {
                         this.loading = Math.ceil(progressEvent.loaded/progressEvent.total*100/2);
-                        console.log('test 1');
                     },
                     onDownloadProgress: (progressEvent) => {
-                        console.log('test 2');
                         if(progressEvent.total) {
                             this.loading = 50 + Math.ceil(progressEvent.loaded/progressEvent.total*100/2);
                         }
                     },
-                }).then((response) => {
+                }*/).then((response) => {
                     switch(response.data.result) {
                         case 'Error': {
                             switch(+response.data.error_code) {
@@ -332,6 +336,10 @@
                     }
                 }).catch().then(() => {
                     this.disabled = false;
+                    if(this.loading_interval) {
+                        clearInterval(this.loading_interval);
+                        this.loading_interval = null;
+                    }
                     this.loading = 100;
                     setTimeout(() => {
                         this.loading = null;
@@ -358,6 +366,11 @@
                 }
                 this.disabled = true;
                 this.loading = 1;
+                this.loading_interval = setInterval(() => {
+                    if(this.loading < 98) {
+                        this.loading += 2;
+                    }
+                }, 300);
                 if(this.need_posts) {
                     this.selected_posts.forEach((post) => {
                         form_data.append('url[]', post.link);
@@ -369,16 +382,23 @@
                         form_data.append('extra['+extra_key+']', '1');
                     });
                 }
-                axios.post('create_order_v2.php', form_data, {
+                axios.post('create_order_v2.php', form_data/*, {
                     onUploadProgress: (progressEvent) => {
                         this.loading = Math.ceil(progressEvent.loaded/progressEvent.total*100/2);
                     },
                     onDownloadProgress: (progressEvent) => {
                         if(progressEvent.total) {
                             this.loading = 50 + Math.ceil(progressEvent.loaded/progressEvent.total*100/2);
+                        } else {
+                            this.loading_interval = setInterval(() => {
+                                console.log(this.loading);
+                                if(this.loading < 95) {
+                                    this.loading += 5;
+                                }
+                            }, 1000);
                         }
                     },
-                }).then((response) => {
+                }*/).then((response) => {
                     switch(response.data.result) {
                         case 'Error': {
                             this.errors.general = response.data.text;
@@ -406,6 +426,10 @@
                     }
                 }).catch((response) => {}).then(() => {
                     this.disabled = false;
+                    if(this.loading_interval) {
+                        clearInterval(this.loading_interval);
+                        this.loading_interval = null;
+                    }
                     this.loading = 100;
                     setTimeout(() => {
                         this.loading = null;
