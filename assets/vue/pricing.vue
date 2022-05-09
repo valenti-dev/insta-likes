@@ -97,7 +97,6 @@
         watch: {
             order_plan(plan) {
                 if(plan) {
-                    console.log(plan);
                     var params = {
                         'plan[count]': plan.count,
                         'plan[price]': plan.price,

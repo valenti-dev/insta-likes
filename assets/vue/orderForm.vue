@@ -84,6 +84,9 @@
                     By pershing you agree with <a href="/terms" target="_blank">rules</a>
                 </div>
             </template>
+            <div class="back_link_wrap">
+                <a href="#" @click.prevent="go_back"><img alt="" src="/img/icons/chevron-left-5cbe72.svg">Back</a>
+            </div>
             <div class="error" v-if="errors.general">{{ errors.general }}</div>
         </div>
 </template>
@@ -459,6 +462,9 @@
             save_email(email) {
                 localStorage.setItem(this.ls_keys.email, email);
             },
+            go_back() {
+                history.back();
+            },
         },
         watch: {
             username() {
@@ -695,6 +701,22 @@
     }
     .rules_text a {
         color: inherit;
+    }
+    .back_link_wrap {
+        text-align: center;
+        font-size: 1.125em;
+        margin: 1.5em 0 0;
+        line-height: 1.15;
+        font-weight: 600;
+    }
+    .back_link_wrap a {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    .back_link_wrap a img {
+        max-height: 0.625em;
+        margin-right: 0.5em;
     }
     @media(max-width: 767px) {
         .order_form {
