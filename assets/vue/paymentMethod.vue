@@ -15,7 +15,7 @@
                         ${{ price_usd }}
                     </template>
                 </div>
-                <div class="tax">+ {{ tax }}% Vat</div>
+                <div class="tax" v-if="tax">+ {{ tax }}% Vat</div>
             </div>
         </div>
 

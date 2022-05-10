@@ -404,7 +404,11 @@
                 }*/).then((response) => {
                     switch(response.data.result) {
                         case 'Error': {
-                            this.errors.general = response.data.text;
+                            if(response.data.text === 'Please, enter correct links.') {
+                                this.errors.general = response.data.text;
+                            } else {
+                                this.errors.general = 'Please choose an Instagram post.';
+                            }
                         } break;
                         case 'Ok': {
                             this.payment_methods = response.data.data.methods;
@@ -413,15 +417,17 @@
                                 'cost': this.cost,
                             };
                             for(var key in this.payment_methods) {
-                                params['methods['+key+'][name]'] = this.payment_methods[key].name;
-                                params['methods['+key+'][discount]'] = this.payment_methods[key].discount;
-                                params['methods['+key+'][tax]'] = this.payment_methods[key].tax;
-                                params['methods['+key+'][price_usd]'] = this.payment_methods[key].price_usd;
-                                params['methods['+key+'][tax_usd]'] = this.payment_methods[key].tax_usd;
-                                params['methods['+key+'][price_local]'] = this.payment_methods[key].price_local;
-                                params['methods['+key+'][tax_local]'] = this.payment_methods[key].tax_local;
-                                params['methods['+key+'][url_to_pay]'] = this.payment_methods[key].url_to_pay;
-                                params['methods['+key+'][modal]'] = this.payment_methods[key].modal;
+                                if(this.payment_methods[key]['available']) {
+                                    params['methods['+key+'][name]'] = this.payment_methods[key].name;
+                                    params['methods['+key+'][discount]'] = this.payment_methods[key].discount;
+                                    params['methods['+key+'][tax]'] = this.payment_methods[key].tax;
+                                    params['methods['+key+'][price_usd]'] = this.payment_methods[key].price_usd;
+                                    params['methods['+key+'][tax_usd]'] = this.payment_methods[key].tax_usd;
+                                    params['methods['+key+'][price_local]'] = this.payment_methods[key].price_local;
+                                    params['methods['+key+'][tax_local]'] = this.payment_methods[key].tax_local;
+                                    params['methods['+key+'][url_to_pay]'] = this.payment_methods[key].url_to_pay;
+                                    params['methods['+key+'][modal]'] = this.payment_methods[key].modal;
+                                }
                             }
                             params = new URLSearchParams(params);
                             location.href = '/order/step3?'+params.toString();
