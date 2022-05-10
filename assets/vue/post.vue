@@ -1,7 +1,12 @@
 <template>
     <div class="post" :style="{'background-image': ('url('+post.img+')')}" :class="{
         selected: selected,
-    }" @click="click"></div>
+    }" @click="click">
+        <div class="selected_qty">
+            <img class="icon" alt="" :src="icon_url">
+            <span class="qty">{{ qty }}</span>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -10,6 +15,8 @@
         props: {
             post: {},
             value: {},
+            qty: {},
+            service: {},
         },
         methods: {
             click() {
@@ -35,6 +42,9 @@
                     return _post.link !== this.post.link;
                 });
             },
+            icon_url() {
+                return '/img/icons/'+this.service.toLowerCase()+'-fff.svg'
+            },
         },
     }
 </script>
@@ -50,30 +60,39 @@
         background-size: cover;
         cursor: pointer;
         position: relative;
+        overflow: hidden;
         transition-property: border-color;
         transition-duration: 0.3s;
     }
-    .post:hover,
-    .post.selected {
+    .post:hover {
         border-color: #5CBE72;
     }
-    .post:before {
-        content: '';
-        display: block;
+    .post .selected_qty {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 30%;
-        height: 30%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url(/img/icons/checked-5cbe72.svg);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         opacity: 0;
+        background-color: rgba(92, 190, 114, 0.5);
+        color: #ffffff;
         transition-property: opacity;
         transition-duration: 0.3s;
     }
-    .post.selected:before {
+    .post .selected_qty .icon {
+        max-width: 1.5em;
+        max-height: 1.5em;
+    }
+    .post .selected_qty .qty {
+        line-height: 1.685;
+        font-size: 1.375em;
+        font-weight: 600;
+    }
+    .post.selected .selected_qty {
         opacity: 1;
     }
 </style>

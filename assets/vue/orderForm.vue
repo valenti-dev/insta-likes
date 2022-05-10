@@ -2,7 +2,12 @@
         <div class="order_form">
             <div class="title">
                 <template v-if="step === 1">Choose account</template>
-                <template v-if="step === 2">Choose posts</template>
+                <template v-if="step === 2">
+                    <template v-if="service === 'Auto-Likes'">
+                        <div style="font-size: 0.75em;">Instagram {{ count_posts ? Math.floor(plan.count/count_posts) : plan.count}} <span style="white-space: nowrap;">Auto-Likes</span> Per post</div>
+                    </template>
+                    <template v-else>Choose posts</template>
+                </template>
                 <template v-if="step === 3">{{ $root.user_info.sym_b }}{{ cost }}{{ $root.user_info.sym_a }}</template>
             </div>
             <div class="steps_wrap">
@@ -46,7 +51,7 @@
                     <div class="posts_wrap">
                         <vue-scroll :ops="scrollbar">
                             <div class="posts_list">
-                                <post v-for="(post, post_indx) in posts" :key="post_indx" :post="post" v-model="selected_posts"></post>
+                                <post v-for="(post, post_indx) in posts" :key="post_indx" :post="post" v-model="selected_posts" :qty="selected_posts.length ? Math.floor(plan.count/selected_posts.length) : null" :service="service"></post>
                             </div>
                         </vue-scroll>
                     </div>
