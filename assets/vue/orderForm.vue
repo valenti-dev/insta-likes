@@ -4,7 +4,7 @@
                 <template v-if="step === 1">Choose account</template>
                 <template v-if="step === 2">
                     <template v-if="service === 'Auto-Likes'">
-                        <div style="font-size: 0.75em;">Instagram {{ count_posts ? Math.floor(plan.count/count_posts) : plan.count}} <span style="white-space: nowrap;">Auto-Likes</span> Per post</div>
+                        <div style="font-size: 0.75em;">{{ plan.count }} Likes per {{ count_posts }} future Instagram posts</div>
                     </template>
                     <template v-else>Choose posts</template>
                 </template>
