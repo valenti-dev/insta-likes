@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <div class="discount_percentage">
+        <div class="discount_percentage" v-if="+discount">
             <span>{{ discount }}%</span>
         </div>
     </div>
