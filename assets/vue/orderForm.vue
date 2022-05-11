@@ -86,7 +86,7 @@
                     <payment-method v-for="(payment_method, payment_method_indx) in payment_methods" v-bind="payment_method" :key="payment_method_indx"></payment-method>
                 </div>
                 <div class="rules_text">
-                    By pershing you agree with <a href="/terms" target="_blank">rules</a>
+                    By purchasing you agree with <a href="/terms" target="_blank">rules</a>
                 </div>
             </template>
             <div class="back_link_wrap">
