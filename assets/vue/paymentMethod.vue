@@ -1,7 +1,7 @@
 <template>
     <div class="payment_method" :class="{
-        green: (discount > 0),
-        red: (discount < 0),
+        green: (discount < 0),
+        red: (discount > 0),
     }" @click="click">
         <div class="logo"></div>
         <div class="data">
