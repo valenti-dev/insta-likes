@@ -410,9 +410,9 @@
                     switch(response.data.result) {
                         case 'Error': {
                             if(response.data.text === 'Please, enter correct links.') {
-                                this.errors.general = response.data.text;
-                            } else {
                                 this.errors.general = 'Please choose an Instagram post.';
+                            } else {
+                                this.errors.general = response.data.text;
                             }
                         } break;
                         case 'Ok': {
