@@ -6,7 +6,7 @@
                     <logo type="white"></logo>
                 </div>
             </div>
-            <div class="col col2">
+            <div class="col col3">
                 <div class="line2">Services</div>
                 <ul class="line3">
                     <li><a href="/buy-instagram-likes">Buy Instagram Likes</a></li>
@@ -14,6 +14,13 @@
                     <li><a href="/buy-instagram-views">Buy Instagram Views</a></li>
                     <li><a href="/buy-instagram-comments">Buy Instagram Сomments</a></li>
                     <li><a href="/automatic-instagram-likes">Automatic Instagram Likes</a></li>
+                </ul>
+            </div>
+            <div class="col col3">
+                <div class="line2">We accept</div>
+                <ul class="line3">
+                    <li><a href="https://www.commercegate.com/" target="_blank">CommerceGate is our Payment Facilitator</a></li>
+                    <li><a href="https://www.cgbilling.com/secure" target="_blank">CommerceGate billing support</a></li>
                 </ul>
             </div>
             <div class="col col3">
