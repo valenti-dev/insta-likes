@@ -536,7 +536,7 @@
         background-color: #ffffff;
         border-radius: 1.25em;
         box-shadow: 0 1.125em 2em 0.25em rgba(0, 0, 0, 0.13);
-        max-width: 90%;
+        max-width: 100%;
         width: 35em;
         margin: 2.5em auto;
     }
@@ -732,6 +732,12 @@
     @media(max-width: 767px) {
         .order_form {
             padding: 1.5em 1.25em;
+            /**/
+            margin: 2em calc(50% - 50vw);
+            padding: 1.5em calc(50vw - 50%);
+            max-width: none;
+            width: 100vw;
+            /**/
         }
         .title {
             font-size: 1.5em;

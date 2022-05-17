@@ -95,4 +95,13 @@
     .post.selected .selected_qty {
         opacity: 1;
     }
+    @media(max-width: 767px) {
+        .post .selected_qty .icon {
+            max-width: 1em;
+            max-height: 1em;
+        }
+        .post .selected_qty .qty {
+            font-size: 0.75em;
+        }
+    }
 </style>
