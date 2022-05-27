@@ -1,7 +1,7 @@
 <template>
     <div class="account" @click="select" :class="value === username ? 'selected' : ''">
         <div class="indicator"></div>
-        <div class="avatar" :style="{'background-image': 'url('+avatar+')'}"></div>
+        <div class="avatar" :style="{'background-image': 'url('+avatar_url(avatar)+')'}"></div>
         <div class="username">{{ username }}</div>
         <div class="actions">
             <button class="action rm_action" @click.stop.prevent="remove"></button>
@@ -23,7 +23,13 @@
             },
             remove() {
                 this.$emit('remove');
-            }
+            },
+            avatar_url(api_url) {
+                var params = new URLSearchParams({
+                    url: api_url,
+                });
+                return '/api/avatar.php?'+params;
+            },
         },
 
     }
