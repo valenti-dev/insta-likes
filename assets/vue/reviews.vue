@@ -5,7 +5,9 @@
             <slot></slot>
         </div>
         <div class="items_wrap">
-            <review v-for="(review, indx) in reviews" v-bind="review" :key="indx"></review>
+            <vue-scroll :ops="scrollbar">
+                <review v-for="(review, indx) in reviews" v-bind="review" :key="indx"></review>
+            </vue-scroll>
         </div>
     </div>
     <div class="col col2">
@@ -37,9 +39,17 @@
     import TextInput from "./textInput";
     import Butt from "./butt";
     import ReviewSentPopup from "./reviewSentPopup";
+    import vuescroll from 'vuescroll';
+
     export default {
         name: "reviews",
-        components: {ReviewSentPopup, Butt, TextInput, Review},
+        components: {
+            ReviewSentPopup,
+            Butt,
+            TextInput,
+            Review,
+            'vue-scroll': vuescroll,
+        },
         props: {
             service: {
                 type: String,
@@ -48,6 +58,25 @@
         },
         data() {
             return {
+                scrollbar: {
+                    vuescroll: {
+                        sizeStrategy: 'number',
+                    },
+                    scrollPanel: {
+                        scrollingX: false,
+                    },
+                    rail: {
+                        background: '#F1F1F1',
+                        size: '0.25em',
+                        specifyBorderRadius: '0.125em',
+                    },
+                    bar: {
+                        background: '#5CBE72',
+                        specifyBorderRadius: '0.125em',
+                        size: '0.25em',
+                        keepShow: true,
+                    },
+                },
                 system: 'Instagram',
                 new_review: {
                     name: '',
@@ -146,6 +175,9 @@
         line-height: 1.685;
         letter-spacing: -0.04em;
         margin: 0 0 1.75em;
+    }
+    .items_wrap {
+        max-height: 28.125em;
     }
     .review_form_wrap {
         z-index: 1;
