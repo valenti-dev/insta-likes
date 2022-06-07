@@ -7,9 +7,6 @@ $description = 'Privacy Policy. Our online Social Media marketing platform Likew
     <section class="title_sect">
         <div class="wrap">
             <h1 class="row1"><span>Privacy</span> Policy</h1>
-            <div class="row2">
-                Last Updated : February 03, 2022
-            </div>
         </div>
     </section>
 <?
@@ -21,55 +18,66 @@ $styles['title_sect'] = [
 <section class="text_sect">
     <div class="wrap">
         <div class="row1">
-            <h2>Site Terms of Use Modifications</h2>
             <p>
-                Likewave may revise <a href="https://likewave.io/terms">these Terms of Use</a> for its website without notice. By using this website, you agree to be bound by the then current version of these Terms and Conditions of Use.
+                By reading this document you submit an agreement between <a href="https://likewave.io/">https://likewave.io/</a> further called Likeware or We and you (further called Customer) on the rules and conditions listed in this Privacy Policy. If you have some doubts whether to agree with any statement or word written in this text, please, leave this website and do not make any purchase on it.
             </p>
-            <h2>Governing Law</h2>
             <p>
-                Any claim relating to Likewave’s website shall be governed by the laws of Estonia without regard to its conflict of law provisions. General Terms and Conditions apply to the use of a website.
-            </p>
-            <h2>Support</h2>
-            <p>
-                We strive to provide our users with industry-leading support. For any sales or technical questions, please email us at <a href="https://likewave.io/support">support</a>. We will be happy to assist you with any questions you may have.
-            </p>
-            <h2>Refunds</h2>
-            <p>
-                Customers who are not entirely satisfied with our services may request a full refund within the first 30 days of their purchase. Refunds will be processed through our customer support agents who can be reached at <a href="https://likewave.io/support">support</a>. Refunds are not applicable to free credits or services. Likewave reserves the right to meet customer satisfaction and all refunds must be processed in due diligence and due process. You are not eligible to ask for a refund when the order of our digital products is confirmed and completed. Once our products are sent and delivered, you cannot return them and get a refund. If you encounter any issues in receiving or downloading any of our digital products, please refer to our customer support. Any inquiries about our Refund Policy should be sent via email.
+                This document was developed to enclose the main principles of the user’s data use by Likeware.
             </p>
             <div class="color_bg">
-                <h2>Service</h2>
-                <ol>
-                    <li>Likewave is not affiliated with Instagram or any Instagram third-party partners in any way.</li>
-                    <li>
-                        It is your sole responsibility to comply with Instagram rules and any legislation that you are subject to. You use Likewave at your own risk.
-                    </li>
-                    <li>
-                        We are not responsible for your actions and their consequences. We are not to blame if your Instagram account is banned for any reason.
-                    </li>
-                    <li>
-                        We require your Instagram username to obtain the required information for the Instagram API. We do not store, give away, or otherwise, distribute your username to any third parties.
-                    </li>
-                    <li>
-                        The expected number of followers, likes, and views is not guaranteed to you in any way.
-                    </li>
-                    <li>
-                        We can’t guarantee the services’ continuous, uninterrupted, or error-free operability.
-                    </li>
-                    <li>
-                        It is the sole responsibility of the customers to ensure their accounts are set to “public” during their use of the Likewave service. Any downtime of service in relation to a client changing their profile to “private” will not result in any payment reimbursement for that period of time.
-                    </li>
-                    <li>
-                        You agree that upon purchasing our service, you clearly understand and agree on what you are purchasing and will not file a fraudulent dispute via the payment processor.
-                    </li>
-                    <li>
-                        We reserve the right to modify, suspend or withdraw the whole or any part of our service or any of its content without notice and without incurring any liability.
-                    </li>
-                    <li>
-                        It is your sole responsibility to check whether the Terms have been updated.
-                    </li>
-                </ol>
+                <h2>1. Main operations with the Customer’s personal information that are held by Likeware</h2>
+                <p>
+                    Likeware collects personal information from the Customer to make the process of purchase convenient and simple. We do not provide third parties with the information indicated on the website <a href="https://likeware.io">https://likeware.io</a> by the Customer including email and contact information listed in the order the Customer places on the website.
+                </p>
+                <p>
+                    The website collects the following data from the Customer:
+                </p>
+                <ul>
+                    <li>Email address for notifications and account access</li>
+                    <li>Personal information to submit an order on the website</li>
+                    <li>Payment data that is necessary to provide payments for purchased services from Likeware</li>
+                    <li>Cookies and user data collected by Google Analytics services</li>
+                </ul>
             </div>
+            <h2>2. Main principles Likeware adheres to when operating with the Customer’s data</h2>
+            <ul>
+                <li>We provide notifications mailing to the Customer’s email indicated when registering on the website or submitting an order.</li>
+                <li>We collect personal information to tailor our services to the Customer’s needs.</li>
+                <li>We provide anonymity and confidentiality to any user who makes an order/purchase on the website.</li>
+                <li>We strictly protect all the data that is required for the account access of the Customer. These data are not available to third parties in any case.</li>
+                <li>We provide protection for the Customer’s payment data at the highest level. In case of any problem occurring with the Customer’s payment card data or information, Likeware is obliged to immediately inform the Customer via the website’s pages or via email about the problem to prevent money leakage.</li>
+                <li>We collect user’s data for specified purposes listed below.</li>
+            </ul>
+            <div class="color_bg">
+                <h2>3. What purposes do We follow by collecting personal data and user information?</h2>
+                <ul>
+                    <li>
+                        To collect the Customer’s information for further promotions and notifications about the services and products Likeware offers.
+                    </li>
+                    <li>To detect and prevent potentially violated and illegal activities of the website’s users.</li>
+                    <li>To analyze and evaluate the services that Likeware offers including the website’s statistics and analytics provided by Google Analytics services.</li>
+                </ul>
+            </div>
+            <h2>4. Google Analytics’ use of the Customer’s data</h2>
+            <p>
+                Our website uses Google Analytics services provided by Google, Inc. These services use a special type of user’s data – so-called ‘cookies’ that are text-format pieces of data located on the Customer’s computer for further analyses on how the Customer uses the website. This information is saved and stored on the servers of Google, Inc. These data are not associated with any other data used by Google.
+            </p>
+            <p>
+                You can customize cookies or refuse to provide them to Google Analytics using the following link:<br>
+                <a href="https://tools.google.com/dlpage/gaoptout?hl=en-GB" target="_blank">https://tools.google.com/dlpage/gaoptout?hl=en-GB</a>
+            </p>
+            <div class="color_bg">
+                <h2>5. Technologies that we use for the Customer’s data protection</h2>
+                <p>
+                    Likeware guarantees the safety and confidentiality of the personal data of the Customer by implementing double encryption technology on the website.
+                    <span style="background-color: #ffff00;">The website uses SSL encryption that ensures the confidentiality of your information in the transmission of data. In no case, we do collect store, or transfer data from your card. The payment operations are carried out entirely through the secure server of our payment gateways. Qloyd OU will not sell, purchase, provide, exchange or in any other manner disclose Account or Transaction data, or personal information of or about a Cardholder to anyone, except, it’s Acquirer, Card networks/associations or in response to valid government demands.</span>
+                </p>
+            </div>
+            <h2>6. Do you have any questions about this Privacy Policy document?</h2>
+            <p>
+                Likeware will be glad to answer them. Please, provide us with feedback via email:<br>
+                <a href="mailto:contact@likewave.io">contact@likewave.io</a>
+            </p>
         </div>
     </div>
 </section>
