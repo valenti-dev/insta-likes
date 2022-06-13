@@ -110,7 +110,6 @@ $styles['title_sect'] = [
                 <p>
                     We ask that you check this Privacy Policy from time to time for changes. Changes will happen as soon as the new updates are added to this page.
                 </p>
-                <img alt="Changes to this Privacy Policy" src="/img/text_sect/image1.png">
             </div>
         </div>
     </div>
