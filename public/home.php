@@ -255,7 +255,7 @@ $styles['chat_sect'] = [
     'href' => '/css/chat_sect.css',
 ];
 ?>
-<section class="reviews_sect">
+<section class="reviews_sect" id="reviews">
     <div class="wrap">
         <h2 class="row1">
             Customer <span>Feedback & Reviews</span>
