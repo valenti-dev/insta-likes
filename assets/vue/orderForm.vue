@@ -6,6 +6,7 @@
                     <template v-if="service === 'Auto-Likes'">
                         <div style="font-size: 0.75em;">{{ plan.count }} Likes per {{ count_posts }} future Instagram posts</div>
                     </template>
+                    <template v-else-if="service === 'Followers'">{{ this.system }} {{ plan.count }} {{ this.service }}</template>
                     <template v-else>Choose posts</template>
                 </template>
                 <template v-if="step === 3">{{ $root.user_info.sym_b }}{{ cost }}{{ $root.user_info.sym_a }}</template>
@@ -758,4 +759,9 @@
             font-size: 1em;
         }
     }
+</style>
+<style>
+.order_form .__vuescroll .__view {
+    padding-right: 0.75em;
+}
 </style>
