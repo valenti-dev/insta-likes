@@ -54,6 +54,10 @@
                 this.new_val = val;
             },
             new_val(val) {
+                if(this.type === 'number' && this.max && (+val) > (+this.max)) {
+                    val = this.max;
+                    this.new_val = val;
+                }
                 this.$emit('input', val);
             },
         },
