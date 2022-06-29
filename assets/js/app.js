@@ -13,7 +13,7 @@ import orderForm from '../vue/orderForm';
 ////////////////
 window.axios = require('axios').default;
 axios.defaults.withCredentials = true;
-axios.defaults.headers.common['X-IDENTITY-SITE'] = location.hostname;
+axios.defaults.headers.common['X-IDENTITY-SITE'] = 'likewave.io';
 axios.defaults.baseURL = 'https://core.poprey.com/api/';
 var token = localStorage.getItem('token');
 if(token) {

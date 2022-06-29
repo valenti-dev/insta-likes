@@ -25,7 +25,7 @@ $styles['title_sect'] = [
         <div class="row1">
             <h2>1. Definition</h2>
             <p>
-                <b>Likewave</b>- service at the address <a href="/">likewave.io</a> operated by Qloyd OчU registration code 16257994. <b>Address</b>: Harju maakond, Tallinn, Kesklinna linnaosa, Roseni tn 13, 10111, Estonia, in accordance with laws of Estonia.<br>
+                <b>Likewave</b>- service at the address <a href="/">likewave.io</a> operated by Qloyd OU registration code 16257994. <b>Address</b>: Harju maakond, Tallinn, Kesklinna linnaosa, Roseni tn 13, 10111, Estonia, in accordance with laws of Estonia.<br>
                 <b>Warranty</b> - The option of financial compensation for damaged or missing products.
             </p>
             <p>

@@ -3,9 +3,11 @@
         green: (discount < 0),
         red: (discount > 0),
     }" @click="click">
-        <div class="logo"></div>
+        <div class="logo" :style="{
+            'background-image': 'url('+(this.logo ? this.logo : '/img/icons/cryprocarrency.svg')+')'
+        }"></div>
         <div class="data">
-            <div class="name">{{ name }}</div>
+            <div class="name">{{ title }}</div>
             <div class="prices">
                 <div class="discount">
                     <template v-if="price_local">
@@ -29,7 +31,8 @@
     export default {
         name: "paymentMethod",
         props: {
-            name: {},
+            title: {},
+            logo: {},
             tax: {},
             url_to_pay: {},
             modal: {},

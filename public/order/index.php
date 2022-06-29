@@ -11,7 +11,7 @@ if(!$_GET['plan']) {
 <? include __DIR__.'/../../assets/php/head.php'; ?>
 <section class="order_sect">
     <div class="wrap">
-        <order-form :plan='<?= json_encode($_GET['plan']); ?>' service="<?= $_GET['service']; ?>" system="<?= $_GET['system']; ?>"></order-form>
+        <order-form :init_plan='<?= json_encode($_GET['plan']); ?>' init_service="<?= $_GET['service']; ?>" init_system="<?= $_GET['system']; ?>"></order-form>
     </div>
 </section>
 <? include __DIR__.'/../../assets/php/foot.php'; ?>

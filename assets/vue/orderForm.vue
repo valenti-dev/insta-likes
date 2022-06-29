@@ -1,7 +1,7 @@
 <template>
         <div class="order_form">
             <div class="title">
-                <template v-if="step === 1">Choose account</template>
+                <template v-if="step === 1">{{ (username_select && accounts.length) ? 'Choose' : 'Add' }} account</template>
                 <template v-if="step === 2">
                     <template v-if="service === 'Auto-Likes'">
                         <div style="font-size: 0.75em;">{{ this.system }} {{ Math.floor(plan.count/(count_posts ? count_posts : 1)) }} <span style="white-space: nowrap;">{{ this.service }}</span> Per post</div>
@@ -120,32 +120,21 @@
             'vue-scroll':vuescroll,
         },
         props: {
-            plan: {
+            init_plan: {
                 type: Object,
             },
-            origin_plans: {
-                type: Array,
-            },
-            system: {
+            init_system: {
                 type: String,
-                default: 'Instagram',
             },
-            service: {
+            init_service: {
                 type: String,
             },
             init_step: {
                 default: null,
             },
-            init_payment_methods: {
-                type: Array,
+            init_order: {
+                default: null,
             },
-            init_email: {
-                type: String,
-            },
-            init_username: {
-                type: String,
-            },
-            init_cost: {},
         },
         data() {
             return {
@@ -172,6 +161,9 @@
                     email: 'email',
                     accounts: 'accounts',
                 },
+                plan: {},
+                system: null,
+                service: null,
                 email: '',
                 username: '',
                 username_select: false,
@@ -195,6 +187,7 @@
                 selected_extra: [],
                 payment_methods: [],
                 count_posts: null,
+                order_num: null,
             };
         },
         mounted() {
@@ -207,28 +200,26 @@
                     this.username_select = true;
                 }
             }
-            ///on time
-            //this.username = 'vseznaemo_zt';
-            //this.to_step2();
             if(this.init_step) {
                 this.step = +this.init_step;
-            }/*
-            if(this.init_posts) {
-                this.posts = this.init_posts;
-            }*/
-            if(this.init_payment_methods) {
-                this.payment_methods = this.init_payment_methods;
             }
-            if(this.init_email) {
-                this.email = this.init_email;
+            if(this.init_system) {
+                this.system = this.init_system;
             }
-            if(this.init_username) {
-                this.username = this.init_username;
+            if(this.init_service) {
+                this.service = this.init_service;
             }
+            if(this.init_plan) {
+                this.plan = this.init_plan;
+            }
+            if(this.init_order) {
+                this.order_num = +this.init_order;
+                this.load_order(this.order_num);
+            }
+            /*
             if(this.step === 2 && this.need_posts) {
-                console.log('load posts');
                 this.load_posts();
-            }
+            }*/
         },
         methods: {
             close() {
@@ -237,38 +228,15 @@
             /**/
             to_step2() {
                 if(this.email) {
-                    var params = {
-                        'plan[count]': this.plan.count,
-                        'plan[price]': this.plan.price,
-                        service: this.service,
-                        system: this.system,
-                        email: this.email,
-                        username: this.username,
-                    };
-                    for(var key in this.plan.extra) {
-                        params['plan[extra]['+key+'][count]'] = this.plan.extra[key].count;
-                        params['plan[extra]['+key+'][disabled]'] = this.plan.extra[key].disabled;
-                        params['plan[extra]['+key+'][name]'] = this.plan.extra[key].name;
-                        params['plan[extra]['+key+'][price]'] = this.plan.extra[key].price;
-                    }
-                    for(var key in this.plan.types) {
-                        params['plan[types]['+key+'][disabled]'] = this.plan.types[key].disabled;
-                        params['plan[types]['+key+'][discount]'] = this.plan.types[key].discount;
-                        params['plan[types]['+key+'][name]'] = this.plan.types[key].name;
-                        params['plan[types]['+key+'][price]'] = this.plan.types[key].price;
-                    }
-
-
-
+                    this.save_email(this.email);
+                    var order_num = 0;
+                    do {
+                        order_num++;
+                    } while(localStorage.getItem('order_'+order_num));
+                    var params = {order: order_num};
                     if (this.need_posts) {
                         this.load_posts(() => {
-                            //this.step = 2;
-                            /*
-                            this.posts.forEach((post, post_indx) => {
-                                params['posts['+post_indx+'][link]'] = post.link;
-                                params['posts['+post_indx+'][img]'] = post.img;
-                                params['posts['+post_indx+'][type]'] = post.type;
-                            });*/
+                            this.save_order(order_num);
                             params = new URLSearchParams(params);
                             location.href = '/order/step2?'+params.toString();
                         });
@@ -276,12 +244,11 @@
                         if (!this.username) {
                             this.errors.username = 'Username required!';
                         } else {
-                            //this.step = 2;
+                            this.save_order(order_num);
                             params = new URLSearchParams(params);
                             location.href = '/order/step2?'+params.toString();
                         }
                     }
-                    this.save_email(this.email);
                 } else {
                     this.errors.email = 'E-mail required!';
                 }
@@ -391,23 +358,7 @@
                         form_data.append('extra['+extra_key+']', '1');
                     });
                 }
-                axios.post('create_order_v2.php', form_data/*, {
-                    onUploadProgress: (progressEvent) => {
-                        this.loading = Math.ceil(progressEvent.loaded/progressEvent.total*100/2);
-                    },
-                    onDownloadProgress: (progressEvent) => {
-                        if(progressEvent.total) {
-                            this.loading = 50 + Math.ceil(progressEvent.loaded/progressEvent.total*100/2);
-                        } else {
-                            this.loading_interval = setInterval(() => {
-                                console.log(this.loading);
-                                if(this.loading < 95) {
-                                    this.loading += 5;
-                                }
-                            }, 1000);
-                        }
-                    },
-                }*/).then((response) => {
+                axios.post('create_order_v2.php', form_data).then((response) => {
                     switch(response.data.result) {
                         case 'Error': {
                             if(response.data.text === 'Please, enter correct links.') {
@@ -419,22 +370,10 @@
                         case 'Ok': {
                             this.payment_methods = response.data.data.methods;
                             //this.step = 3;
+                            this.save_order(this.order_num);
                             var params = {
-                                'cost': this.cost,
+                                order: this.order_num,
                             };
-                            for(var key in this.payment_methods) {
-                                if(this.payment_methods[key]['available']) {
-                                    params['methods['+key+'][name]'] = this.payment_methods[key].name;
-                                    params['methods['+key+'][discount]'] = this.payment_methods[key].discount;
-                                    params['methods['+key+'][tax]'] = this.payment_methods[key].tax;
-                                    params['methods['+key+'][price_usd]'] = this.payment_methods[key].price_usd;
-                                    params['methods['+key+'][tax_usd]'] = this.payment_methods[key].tax_usd;
-                                    params['methods['+key+'][price_local]'] = this.payment_methods[key].price_local;
-                                    params['methods['+key+'][tax_local]'] = this.payment_methods[key].tax_local;
-                                    params['methods['+key+'][url_to_pay]'] = this.payment_methods[key].url_to_pay;
-                                    params['methods['+key+'][modal]'] = this.payment_methods[key].modal;
-                                }
-                            }
                             params = new URLSearchParams(params);
                             location.href = '/order/step3?'+params.toString();
                         } break;
@@ -477,6 +416,33 @@
             go_back() {
                 history.back();
             },
+
+            save_order(num) {
+                var order_data = {
+                    plan: this.plan,
+                    service: this.service,
+                    system: this.system,
+                    email: this.email,
+                    username: this.username,
+                    posts: this.posts,
+                    count_posts: this.count_posts,
+                    payment_methods: this.payment_methods,
+                    posts_user_id: this.posts_user_id,
+                    selected_type: this.selected_type,
+                    selected_posts: this.selected_posts,
+                    selected_extra: this.selected_extra,
+                };
+                localStorage.setItem('order_'+num, JSON.stringify(order_data));
+            },
+            load_order(num) {
+                var order_data = JSON.parse(localStorage.getItem('order_'+num));
+                if(order_data) {
+                    for(var key in order_data) {
+                        this[key] = order_data[key];
+                    }
+                }
+                return order_data;
+            }
         },
         watch: {
             username() {
@@ -513,14 +479,10 @@
         },
         computed: {
             cost() {
-                if(this.step === 3) {
-                    cost = +this.init_cost;
-                } else {
-                    var cost = +this.plan.types[this.selected_type].price;
-                    this.selected_extra.forEach((extra_key) => {
-                        cost += +this.plan.extra[extra_key].price;
-                    });
-                }
+                var cost = +this.plan.types[this.selected_type].price;
+                this.selected_extra.forEach((extra_key) => {
+                    cost += +this.plan.extra[extra_key].price;
+                });
                 return cost.toFixed(2);
             },
             need_posts() {
