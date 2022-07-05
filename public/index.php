@@ -19,5 +19,13 @@ if(!isset($_GET['q']) || !$_GET['q']) {
     $canonical = 'https://'.$_SERVER['SERVER_NAME'].'/'.$_GET['q'];
     return include($_GET['q'].'.php');
 } else {
-    http_response_code(404);
+    $q_parts = explode('/', $_GET['q']);
+    if($q_parts && $q_parts[0] == 'ticket') {
+        $canonical = 'https://'.$_SERVER['SERVER_NAME'].'/'.$_GET['q'];
+        $email = $q_parts[1];
+        $code = $q_parts[2];
+        return include('ticket.php');
+    } else {
+        http_response_code(404);
+    }
 }
