@@ -42,5 +42,5 @@ $styles = [];
         loaded: loaded,
     }">
         <pay-status-popup v-if="payment.success !== null" :success="payment.success" @close="payment.success = null"></pay-status-popup>
-        <? include 'header.php'; ?>
+        <? include ($page_class == 'ticket_page') ? 'ticket_header.php' : 'header.php'; ?>
         <main class="main">

@@ -21,6 +21,13 @@
     justify-content: space-between;
     align-items: center;
 }
+.header .row1 .right > .butt {
+    height: 3.125em;
+    padding: 0 2em;
+}
+.header .row1 .right > .butt .butt_label {
+    font-size: 1em;
+}
 .header .row1 .menu_burger {
     display: none;
 }
@@ -123,6 +130,10 @@
 @media(max-width: 767px) {
     .header {
         padding: 1.5em 0;
+    }
+    .header .row1 .right > .butt {
+        height: 2.5em;
+        padding: 0 1em;
     }
     .header .row1 .menu_burger {
         padding: 0 3.5em 0 0.625em;
