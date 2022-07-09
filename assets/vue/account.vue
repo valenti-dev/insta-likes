@@ -20,6 +20,7 @@
         methods: {
             select() {
                 this.$emit('input', this.username);
+                this.$emit('click');
             },
             remove() {
                 this.$emit('remove');

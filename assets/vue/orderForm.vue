@@ -26,7 +26,7 @@
                                 <div class="accounts_list">
                                     <account v-for="(account, account_indx) in accounts" v-bind="account" v-model="username" @remove="rm_account(account_indx)" :key="account_indx" :class="{
                                         error: errors.username,
-                                    }"></account>
+                                    }" @click="to_step2"></account>
                                 </div>
                             </vue-scroll>
                         </div>
@@ -43,9 +43,11 @@
                 <div class="link_wrap" v-if="username_select && accounts.length">
                     <a href="#" @click.prevent="username_select = false">Add new one</a>
                 </div>
-                <div class="butt_wrap">
-                    <butt :disabled="disabled" :loading="loading" @click="to_step2">Buy</butt>
+
+                <div class="butt_wrap" v-if="!username_select || !accounts.length">
+                    <butt :disabled="disabled" :loading="loading" @click="to_step2">Next</butt>
                 </div>
+
             </template>
             <template v-if="step === 2">
                 <div class="posts_container" v-if="posts.length">
@@ -68,7 +70,7 @@
                     </field>
                 </div>
                 <div class="types_wrap">
-                    <button class="type" v-for="(type, type_key) in plan.types" v-if="!(+type.disabled)" @click="selected_type = type_key" :class="{
+                    <button class="type" v-for="(type, type_key) in plan_types" v-if="!(+type.disabled)" @click="selected_type = type_key" :class="{
                         selected: (type_key === selected_type),
                     }">
                         <span class="type_label">{{ type.name }}</span>
@@ -90,7 +92,7 @@
                     By purchasing you agree with <a href="/terms" target="_blank">rules</a>
                 </div>
             </template>
-            <div class="back_link_wrap">
+            <div class="back_link_wrap" v-if="step !== 1">
                 <a href="#" @click.prevent="go_back"><img alt="" src="/img/icons/chevron-left-5cbe72.svg">Back</a>
             </div>
             <div class="error" v-if="errors.general">{{ errors.general }}</div>
@@ -220,6 +222,7 @@
             if(this.step === 2 && this.need_posts) {
                 this.load_posts();
             }*/
+            console.log(this.plan.types);
         },
         methods: {
             close() {
@@ -461,8 +464,8 @@
                 switch(+this.step) {
                     case 2: {
                         if(!this.selected_type) {
-                            for(var key in this.plan.types) {
-                                if(!(+this.plan.types[key].disabled)) {
+                            for(var key in this.plan_types) {
+                                if(!(+this.plan_types[key].disabled)) {
                                     this.selected_type = key;
                                     break;
                                 }
@@ -487,6 +490,23 @@
             },
             need_posts() {
                 return this.need_posts_services.includes(this.service);
+            },
+            plan_types() {
+                var sort_arr = [];
+                for(var key in this.plan.types) {
+                    sort_arr.push({
+                        key: key,
+                        price: +this.plan.types[key].price,
+                    })
+                }
+                sort_arr.sort(function(a, b) {
+                    return a.price - b.price;
+                });
+                var result = {};
+                sort_arr.forEach((item) => {
+                    result[item.key] = this.plan.types[item.key];
+                });
+                return result;
             },
         },
     }
